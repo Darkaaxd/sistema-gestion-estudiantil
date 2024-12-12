@@ -1,12 +1,11 @@
+import { API_URL } from './config.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('loginForm');
     const errorMessage = document.getElementById('error-message');
     const whatsappInput = document.getElementById('whatsapp');
     const whatsappGroup = document.getElementById('whatsappGroup');
     const userTypeInputs = document.querySelectorAll('input[name="userType"]');
-
-    // API URL
-    const API_URL = 'http://localhost:3000';
 
     // Manejar cambio de tipo de usuario
     userTypeInputs.forEach(input => {

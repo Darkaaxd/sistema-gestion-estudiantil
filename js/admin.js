@@ -1,3 +1,5 @@
+import { API_URL } from './config.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     // Verificar sesión
     const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
@@ -24,9 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Estado
     let selectedEmoji = null;
-
-    // API URL
-    const API_URL = 'http://localhost:3000';
 
     // Inicializar emojis
     subjectEmojis.forEach(emoji => {

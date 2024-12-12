@@ -1,7 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // API URL
-    const API_URL = 'http://localhost:3000';
+import { API_URL } from './config.js';
 
+document.addEventListener('DOMContentLoaded', () => {
     // Verificar sesión
     const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
     if (!currentUser || currentUser.role !== 'student') {
