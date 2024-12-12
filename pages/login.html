@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistema de Gestión Estudiantil</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo-section">
+                <div class="logo">📚</div>
+                <h2>Sistema de Gestión Estudiantil</h2>
+                <p class="subtitle">Inicia sesión para continuar</p>
+            </div>
+            <div class="user-type-selector">
+                <label>
+                    <input type="radio" name="userType" value="student" checked> Estudiante
+                </label>
+                <label>
+                    <input type="radio" name="userType" value="admin"> Administrador
+                </label>
+            </div>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" id="username" required placeholder="Ingresa tu usuario">
+                </div>
+                <div class="input-group" id="whatsappGroup">
+                    <label for="whatsapp">WhatsApp</label>
+                    <input type="tel" id="whatsapp" maxlength="10" pattern="3[0-9]{9}" 
+                           placeholder="Ej: 3001234567">
+                    <small class="input-hint">Ingresa tu número sin +57</small>
+                </div>
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" required placeholder="Ingresa tu contraseña">
+                </div>
+                <button type="submit">
+                    <span>Iniciar Sesión</span>
+                    <div class="button-hover"></div>
+                </button>
+            </form>
+            <div id="error-message" class="error-message"></div>
+        </div>
+    </div>
+    <script src="../js/login.js"></script>
+</body>
+</html>

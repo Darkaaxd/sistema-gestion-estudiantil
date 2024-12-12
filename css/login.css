@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background: #f7f6f3;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #37352f;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+}
+
+.login-box {
+    background: white;
+    padding: 48px;
+    border-radius: 12px;
+    box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, 
+                rgba(15, 15, 15, 0.1) 0px 2px 4px;
+    transition: transform 0.2s ease;
+}
+
+.login-box:hover {
+    transform: translateY(-2px);
+}
+
+.logo-section {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.logo {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #37352f;
+}
+
+.subtitle {
+    color: #787774;
+    font-size: 14px;
+}
+
+.input-group {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #37352f;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    background: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #0a84ff;
+    box-shadow: 0 0 0 2px rgba(10, 132, 255, 0.1);
+}
+
+.input-group input::placeholder {
+    color: #a3a29e;
+}
+
+.input-hint {
+    display: block;
+    font-size: 12px;
+    color: #787774;
+    margin-top: 6px;
+}
+
+.user-type-selector {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 24px;
+    padding: 12px;
+    background: #f7f6f3;
+    border-radius: 8px;
+}
+
+.user-type-selector label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #37352f;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.user-type-selector label:hover {
+    background-color: #eae9e5;
+}
+
+.user-type-selector input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #d3d1cb;
+    border-radius: 50%;
+    outline: none;
+    margin: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.user-type-selector input[type="radio"]:checked {
+    border-color: #2eaadc;
+}
+
+.user-type-selector input[type="radio"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #2eaadc;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #2eaadc;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #2196f3;
+}
+
+.button-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+button:hover .button-hover {
+    transform: translateX(0);
+}
+
+.error-message {
+    margin-top: 16px;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: #fff3f3;
+    border: 1px solid #ffa4a4;
+    color: #e03e3e;
+    font-size: 14px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        padding: 32px 24px;
+    }
+    
+    .logo {
+        font-size: 36px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+}

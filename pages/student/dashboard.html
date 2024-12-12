@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Estudiante - Sistema de Gestión Estudiantil</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="../../css/student.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">👋</div>
+                <h1>Portal Estudiante</h1>
+                <p class="student-name" id="studentName"></p>
+            </div>
+            <nav class="sidebar-nav">
+                <button class="nav-item active" data-section="subjects">
+                    <span class="icon">📚</span>
+                    Mis Materias
+                </button>
+                <button class="nav-item" data-section="grades">
+                    <span class="icon">📊</span>
+                    Calificaciones
+                </button>
+                <button class="nav-item" data-section="schedule">
+                    <span class="icon">📅</span>
+                    Horario
+                </button>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="section active" id="subjects-section">
+                <div class="section-header">
+                    <h2>Mis Materias</h2>
+                </div>
+                <div class="subjects-grid" id="subjectsGrid">
+                    <!-- Las materias se cargarán dinámicamente -->
+                </div>
+            </div>
+
+            <div class="section" id="grades-section">
+                <div class="section-header">
+                    <h2>Mis Calificaciones</h2>
+                </div>
+                <div class="grades-container">
+                    <!-- Las calificaciones se cargarán dinámicamente -->
+                    <p class="empty-state">Próximamente podrás ver tus calificaciones aquí</p>
+                </div>
+            </div>
+
+            <div class="section" id="schedule-section">
+                <div class="section-header">
+                    <h2>Mi Horario</h2>
+                </div>
+                <div class="schedule-container">
+                    <!-- El horario se cargará dinámicamente -->
+                    <p class="empty-state">Próximamente podrás ver tu horario aquí</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../../js/student.js"></script>
+</body>
+</html>

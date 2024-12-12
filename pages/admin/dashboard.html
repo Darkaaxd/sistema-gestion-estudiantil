@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sistema de Gestión Estudiantil</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="../../css/admin.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">📚</div>
+                <h1>Sistema de Gestión</h1>
+            </div>
+            <nav class="sidebar-nav">
+                <button class="nav-item active" data-section="subjects">
+                    <span class="icon">📝</span>
+                    Gestionar Materias
+                </button>
+                <!-- Aquí irán más opciones del menú -->
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="section" id="subjects-section">
+                <div class="section-header">
+                    <h2>Gestión de Materias</h2>
+                    <button id="addSubjectBtn" class="primary-button">
+                        <span class="icon">➕</span>
+                        Añadir Materia
+                    </button>
+                </div>
+                <div class="subjects-grid" id="subjectsGrid">
+                    <!-- Aquí se mostrarán las materias -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal para añadir materia -->
+    <div class="modal" id="subjectModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Añadir Nueva Materia</h3>
+                <button class="close-button" id="closeModal">×</button>
+            </div>
+            <form id="subjectForm">
+                <div class="form-group">
+                    <label for="subjectName">Nombre de la Materia</label>
+                    <input type="text" id="subjectName" required placeholder="Ej: Matemáticas">
+                </div>
+                <div class="form-group">
+                    <label>Selecciona un Emoji</label>
+                    <div class="emoji-grid" id="emojiGrid">
+                        <!-- Emojis serán insertados por JavaScript -->
+                    </div>
+                </div>
+                <button type="submit" class="primary-button">Guardar Materia</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../../js/admin.js"></script>
+</body>
+</html>
